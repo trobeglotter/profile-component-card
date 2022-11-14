@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-weight: 400;
+    box-sizing: border-box;
+}
+:root {
+    --dark-cyan: hsl(185, 75%, 39%);
+    --very-dark-blue: hsl(229, 23%, 23%);
+    --dark-grayish-blue: hsl(227, 10%, 46%);
+    --dark-gray: hsl(0, 0%, 59%);
+}
+.container {
+    height: 100vh;
+    background: var(--dark-cyan);
+    color: var(--very-dark-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+
+}
+.top-bg {
+    position: absolute;
+    background: url(images/bg-pattern-top.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 978px;
+    width: 978px;
+    top: -528px;
+    left: -284px;
+}
+.bottom-bg {
+    position: absolute;
+    background: url(images/bg-pattern-bottom.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 978px;
+    width: 978px;
+    bottom: -628px;
+    right: -250px;  
+}
+.card {
+    background: white;
+    height: 376px;
+    width: 350px;
+    border-radius: 20px;
+    z-index: 99;
+    position: relative;
+}
+.card .bg-img {
+    height: 142px;
+    background: url(images/bg-pattern-card.svg);
+    border-radius: 20px 20px 0 0;
+}
+.profile .pic {
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%);
+    border-radius: 50%;
+    padding: 5px;
+    background: white;
+    top: 94px;
+}
+.profile .pic img {
+    border-radius: 50%;
+}
+.profile-info {
+    margin-top: 74px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+.profile {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid var(--dark-gray);
+    padding-bottom: 25px;
+}
+.profile .name {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: var(--very-dark-blue);
+
+}
+.profile .name span {
+    font-weight: 700;
+}
+.profile .location {
+    color: var(--dark-grayish-blue);
+}
+.stats {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    padding-top: 23px;
+    text-align: center;
+}
+.stats .number {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 7px;
+    color: var(--very-dark-blue);
+    
+}
+.stats p {
+    color: var(--dark-grayish-blue);
+}
+/* Responsive */
+@media(max-width: 375px){
+    .top-bg{
+        height: 375px;
+        width: 375px;
+        top: -160px;
+        left: -167px;
+    }
+    .bottom-bg{
+        height: 375px;
+        width: 375px;
+        bottom: -79px;
+        right: -167px;
+    }
+}
